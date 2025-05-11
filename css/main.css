@@ -1,0 +1,55 @@
+html {
+    background-color: black;
+    color: white;
+    font-family: fantasy;
+}
+
+body {
+    margin: 0;
+}
+#test_container {
+    box-sizing: border-box;
+    width: 100%;
+    height: 200%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#question_container {
+    font-size: 3rem;
+}
+
+#answers_container {
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    place-items: center;
+    gap: 0.8rem;
+}
+
+#answer {
+    background-color: black;
+    font-size: 2rem;
+    padding-left: 5rem; 
+    padding-block: 0.4rem;
+    border-radius: 25px;
+}
+
+@keyframes answer_animation {
+    0% {
+        color: white;
+    }
+
+    50% {
+        color: red;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+#answer:hover {
+    animation: answer_animation 2s infinite; 
+}

@@ -28,7 +28,7 @@ body {
     gap: 0.8rem;
 }
 
-#answer {
+.answer {
     background-color: black;
     font-size: 2rem;
     padding-left: 5rem; 
@@ -42,7 +42,7 @@ body {
     }
 
     50% {
-        color: red;
+        color: black;
     }
 
     100% {
@@ -50,6 +50,34 @@ body {
     }
 }
 
-#answer:hover {
+.answer:hover {
     animation: answer_animation 2s infinite; 
+}
+
+.correct {
+    background-color: darkolivegreen;
+}
+
+.wrong {
+    background-color: red;
+}
+
+.skip_button {
+    background-color: paleturquoise;
+    padding-inline: 0.2rem;
+    padding-block: 0.1rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: white 2px solid;
+    border-radius: 5px;
+}
+
+@keyframes skip_button_animation {
+    0% {
+        background-color: blue;
+    }
 }
